@@ -1,0 +1,190 @@
+/* прелоадер */
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #b76333;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+  
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes preloader-bounce {
+  
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
+
+
+/* переменные */
+:root {
+    --color-div: rgb(100, 55, 0);
+    --font-family-zagolovok: Arial Black, Helvetica, sans-serif;
+    --font-family-p: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(249, 217, 169);
+}
+
+.nav-header {
+    word-spacing: 50px;
+    text-align: center;
+}
+
+.nav-header a {
+    text-decoration: none;
+    font-family: var(--font-family-zagolovok);
+    font-size: 28px;
+    color: rgb(100, 55, 0);
+    transition: 0.5s;
+}
+
+.nav-header a:hover {
+    color: rgb(217, 141, 8);
+    transition: 0.5s;
+}
+
+.block {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.block p {
+    font-family: var(--font-family-zagolovok);
+}
+
+.block-p-1 {
+    font-size: 24px;
+}
+
+
+/* анимация текста */
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+  
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+}
+to {
+      margin-left: 0%;
+      width: 100%;
+}
+75% {
+      font-size: 300%;
+      margin-left: 25%;
+      width: 150%;
+    }
+}
+
+footer {
+    text-align: center;
+}
+
+/* анимация кнопки */
+.animate-motion {
+	line-height: 72px;
+    width: 150px;
+	background: var(--color-div);
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+	color: #FFFFFF;
+    margin-left: 45%;
+	animation: animate_motion 5s 0s both infinite;
+}
+.animate-motion:hover {
+	animation: none;
+}
+ 
+@keyframes animate_motion {
+	0%, 20% {
+		transform: translate3d(0, 0, 0);
+	}
+	10%, 14%, 18%, 2%, 6% {
+		transform: translate3d(-7px, 0, 0);
+	}
+	12%, 16%, 4%, 8% {
+		transform: translate3d(7px, 0, 0);
+	}
+}
+
+.p-width {
+    width: 500px;
+    text-align: center;
+    margin-left: 33%;
+}
+
+.img-div {
+    padding-top: 30px;
+}
+
+.cofee {
+    background-color: var(--color-div);
+    color: #e0e0e0;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: var(--font-family-zagolovok);
+    font-size: 24px;
+    margin-top: 15px;
+}

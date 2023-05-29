@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+    <!-- прелоадер -->
+    <div class="preloader">
+        <div class="preloader__row">
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="nav-header">
+            <a href="./index.html">Главная</a>
+            <a href="./page/o-nas.html">О_нас</a>
+            <a href="./page/menu.html">Меню</a>
+            <a href="./page/map.html">Карта</a>
+        </nav>
+    </header>
+
+    <!-- 1 блок -->
+    <div class="block">
+        <p class="block-p-1">Спонсор тепла Ваших рук</p>
+        <p>Мы готовим из высококачественных зёрен, которые отбираем сами.</p>
+    </div>
+
+    <p class="p-width">Компания Makecoffee была создана в 2015 году в Подмосковном городе Кубинка.
+        Началось всё с небольшой кофейни, а позже переросло в большую любовь к кофе.
+        Сейчас Makecoffee - это сеть успешных кофеен по Московской области, которая продолжает открывать свои двери в других городах.
+        Мы рады видеть каждого из вас, чтобы поделиться дружелюбной атмосферой, а, главное, вкусным кофе!
+    </p>
+    
+    <div class="animate-motion">Купить кофе</div>
+
+    <div class="img-div" align="center">
+      <img src="https://avatars.mds.yandex.net/i?id=f0d7165fb217bff4f837fc52decddd1c3327cc09-8224441-images-thumbs&n=13">
+    </div>
+
+    <!-- кофейня -->
+    <div class="cofee">
+        <h3>Мы сделаем все, чтобы вы были счастливы!</h3>
+    </div>
+
+
+
+    <footer>
+        <h3>&copy; 2023 Coffee Shop</h3>
+    </footer>
+
+
+
+    <script src="./javascript/main.js"></script>
+
+    <!-- preloader -->
+    <script>
+        window.onload = function () {
+          document.body.classList.add('loaded');
+        }
+    </script>
+<script>
+    window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 500);
+    }
+  </script>
+</body>
+</html>
